@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#  This script uses while loop and case statements and displays:
+#+ '4' and then 'bad luck from China' on the 4th loop
+#+ '9' and then 'bad luck from Japan' on the 9th loop
+#+ '17' and then 'bad luck from Italy' on the 17th loop
+#+ and the loop number on every other loop, for a total of 20 loops
+n=1
+while [ "$n" -lt 21 ]
+do
+    echo "$n"
+    case $n in
+        "4") echo "bad luck from China";;
+        "9") echo "bad luck from Japan";;
+        "17") echo "bad luck from Italy";;
+    esac
+    (( n++ ))
+done
