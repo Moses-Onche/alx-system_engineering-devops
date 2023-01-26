@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script displays the list of files in pwd
+n=$(ls)
+for a in $n; do
+  echo "$a" | cut -d '-' -f2
+done
