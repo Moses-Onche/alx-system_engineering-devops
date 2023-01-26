@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#  This script uses while, if, elif, else and displays:
+#+ bad luck on the 4th loop
+#+ good luck on the 8th loop
+#+ Best School in the other iterations
+n=1
+while [ $n -lt 11 ]
+do
+    if [[ $n == 4 ]]; then
+	    echo "bad luck"
+    elif [[ $n == 8 ]]; then
+	    echo "good luck"
+    else
+	    echo "Best School"
+    fi
+    ((n++))
+done
