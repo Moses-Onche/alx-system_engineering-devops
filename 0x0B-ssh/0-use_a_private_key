@@ -1,2 +1,3 @@
 #!/bin/bash
+# Connects to my ALX ubuntu server using ssh
 ssh -i ~/.ssh/school ubuntu@100.26.18.213
