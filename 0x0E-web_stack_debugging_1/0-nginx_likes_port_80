@@ -1,7 +1,5 @@
-#!/bin/bash
-# A script to install and reconfigure nginx to port 80
-
-sudo nano /etc/nginx/nginx.conf
-sudo sed -i 's/listen [0-9]\{1,5\};/listen 80;/' /etc/nginx/nginx.conf
-sudo systemctl restart nginx
-
+#!/usr/bin/env bash
+# Configures an Nginx server to listen on port 80.
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo systemctl nginx restart
