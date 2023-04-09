@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Make it short and sweet.
-sudo rm /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo systemctl nginx restart
+# Make 0-nginx... short and sweet
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
