@@ -2,7 +2,7 @@
 # A script to create 404 error page
 sudo apt-get update
 sudo apt-get install -y nginx 
-sudo echo "Hello World!" > var/www/html/index.html
+sudo echo "Hello World!" > /var/www/html/index.html
 
 sudo echo "Ceci n'est pas une page" > /var/www/html/404.html
 sudo echo "server {
