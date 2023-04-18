@@ -3,7 +3,7 @@
 
 #  Create a dump of all databases in MySQL
 #+ taking root password as argument
-mysqldump -u root -p "$1" --all-databases > backup.sql
+mysqldump --all-databases -u root --password="$1" > backup.sql
 
 # Create a compressed archive of dump.
 tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
