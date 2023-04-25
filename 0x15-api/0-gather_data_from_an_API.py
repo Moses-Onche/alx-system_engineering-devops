@@ -9,12 +9,8 @@ if __name__ == "__main__":
     employee = requests.get(url + "users/{}".format(sys.argv[1])).json()
     items = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
 
-    completed = []
-    for i in items:
-        if i.get("completed") is True:
-            completed.append(i.get("title"))
+    completed = [i.get("title") for i in items if i.get("completed") is True]
 
     print("Employee {} is done with tasks({}/{}):".format(
         employee.get("name"), len(completed), len(items)))
-    for item in completed:
-        print("\t {}".format(item))
+    [print("\t {}".format(item)) for item in completed]
