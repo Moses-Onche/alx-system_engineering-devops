@@ -9,10 +9,10 @@ if __name__ == "__main__":
 
     with open("todo_all_employees.json", "w") as j_file:
         json.dump({
-            person.get("id"): [{
+            p.get("id"): [{
                 "task": item.get("title"),
                 "completed": item.get("completed"),
-                "username": person.get("username")
+                "username": p.get("username")
             } for item in requests.get(url + "todos",
-                                    params={"userId": person.get("id")}).json()]
-            for person in employee}, j_file)
+                                    params={"userId": p.get("id")}).json()]
+            for p in employee}, j_file)
