@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# A script that uses a REST API for a given employee ID
-# and returns a TODO list progress.
-import sys
+# A script that uses a REST API to print todo list
+
 import requests
+import sys
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
