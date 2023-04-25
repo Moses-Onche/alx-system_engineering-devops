@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# A script that uses a REST API to print todo list
+"""A script that uses a REST API to print todo list."""
 
 import requests
 import sys
