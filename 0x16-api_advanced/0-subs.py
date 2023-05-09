@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Describes a function that gets num of subscribers in a given subreddit."""
+"""
+Describes a function that gets num of subscribers
+in a given subreddit.
+"""
 import requests
 
 
