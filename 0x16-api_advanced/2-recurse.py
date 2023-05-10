@@ -15,15 +15,15 @@ def recurse(subreddit, hot_list=[], after="", count=0):
         "limit": 100
     }
     resp = requests.get(url, headers=header, params=params,
-                            allow_redirects=False)
+                        allow_redirects=False)
     if resp.status_code != 200:
         return None
     else:
-    data = resp.json().get("data")
-    after = results.get("after")
-    count += results.get("dist")
-    for item in results.get("children"):
-        hot_list.append(item.get("data").get("title"))
+        data = resp.json().get("data")
+        after = results.get("after")
+        count += results.get("dist")
+        for item in results.get("children"):
+            hot_list.append(item.get("data").get("title"))
 
     if after is not None:
         return recurse(subreddit, hot_list, after, count)
