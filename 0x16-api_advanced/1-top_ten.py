@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Describes a function that prints the titles of the first 10
-hottest posts for a given subreddit.
-"""
+"""A script that prints the titles of the hottest posts."""
 import requests
 
 
