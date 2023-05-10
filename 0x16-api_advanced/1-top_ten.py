@@ -11,7 +11,8 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     header = "linux-Moses-Onche/v1.0"
 
-    resp = requests.get(url, params={"limit":10}, headers=header, allow_redirects=False)
+    resp = requests.get(url, params={"limit": 10},
+                        headers=header, allow_redirects=False)
     if resp.status_code != 200:
         print("None")
         return
